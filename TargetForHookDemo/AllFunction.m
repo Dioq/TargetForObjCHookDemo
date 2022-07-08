@@ -54,4 +54,19 @@
     return tmp;
 }
 
+
++(NSDictionary *)getNSDictionary {
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:@"v1",@"k1",@"v2",@"k2",@"v3",@"k3", nil];
+    return dict;
+}
++(NSArray *)getNSArray {
+    NSArray *arr = [NSArray arrayWithObjects:@"one",@"two",@"three",@"four", nil];
+    return arr;
+}
++(NSData *)getNSData {
+    NSString *modleStr = @"This is a test string2";
+    NSData *data = [modleStr dataUsingEncoding:NSUTF8StringEncoding];
+    return data;
+}
+
 @end

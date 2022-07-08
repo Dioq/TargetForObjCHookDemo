@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,assign)int gender;
 @property(nonatomic,assign)float height;
 
+// 测试主动调用
++(id)getUserId;
+-(id)fastSwitchUserWithUserId:(id)arg1;
+
 @end
 
 NS_ASSUME_NONNULL_END

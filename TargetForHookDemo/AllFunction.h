@@ -35,6 +35,12 @@ typedef int (^func_more)(int num1, int num2);
 // 类方法 无参数 有返回值 为数字类型
 +(long)sharedRetNumber;
 
+
+// 主动调用获取一些类型,用来练习处理这些数据类型
++(NSDictionary *)getNSDictionary;
++(NSArray *)getNSArray;
++(NSData *)getNSData;
+
 @end
 
 NS_ASSUME_NONNULL_END
