@@ -68,5 +68,10 @@
     NSData *data = [modleStr dataUsingEncoding:NSUTF8StringEncoding];
     return data;
 }
++(NSData *)getArchive {
+    NSString *targetData = @"d9ac70dac380a8b6d87840a1d2b2b94f";
+    NSData *tmpData = [NSKeyedArchiver archivedDataWithRootObject:targetData];
+    return tmpData;
+}
 
 @end

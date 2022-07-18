@@ -115,5 +115,29 @@
 }
 
 
+struct teststruct {
+    char    machine[0x256];
+};
+// 定义一个 C 函数 第一个参数为 struct 指针,
+int mycfunc(struct teststruct * stru,char *s) {
+    size_t len = 0x100;
+    char str[len];
+    bzero(str, len);
+    char *mach = "A string from c function.";
+    strcat(str, mach);
+    strcat(str, s);
+    printf("str:%s\n",str);
+    memcpy(&(stru->machine),str,len);
+    return 0;
+}
+- (IBAction)cfunction:(UIButton *)sender {
+    struct teststruct stru;
+    memset(&stru, 0, sizeof(struct teststruct));
+    char *s = "||add end!";
+    mycfunc(&stru,s);
+    NSString *string = [[NSString alloc] initWithCString:stru.machine encoding:NSUTF8StringEncoding];
+      NSLog(@"0x%lx, %@", string.length, string);
+    [self.show setText:string];
+}
 
 @end

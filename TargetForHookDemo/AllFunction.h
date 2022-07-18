@@ -40,6 +40,7 @@ typedef int (^func_more)(int num1, int num2);
 +(NSDictionary *)getNSDictionary;
 +(NSArray *)getNSArray;
 +(NSData *)getNSData;
++(NSData *)getArchive; // 序列化后的数据
 
 @end
 
